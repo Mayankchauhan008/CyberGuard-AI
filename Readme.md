@@ -18,9 +18,9 @@ A machine learning-powered web application that detects **Phishing** and **XSS (
 
 ├── app.py # Main Flask backend
 
-├── malicious_phish.csv # Phishing URL dataset
+├── malicious_url.ipynb # Phishing URL dataset(Kaggle)
 
-├── XSS_dataset.csv # XSS payload dataset
+├── XSS.ipynb # XSS payload dataset(Kaggle)
 
 ├── models/ # Trained ML models
 

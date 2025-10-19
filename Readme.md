@@ -115,3 +115,4 @@ Models are typically trained using algorithms like Random Forest or Naive Bayes 
 ## 📝 License
 
 This project is licensed under the **MIT License**.
+See the [LICENSE](LICENSE) file for more details.

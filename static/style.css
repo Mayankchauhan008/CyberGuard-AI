@@ -1,0 +1,53 @@
+    /* === Your CSS (kept as-is) === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: #333; overflow-x: hidden; }
+    .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .particle { position: absolute; background: rgba(255, 255, 255, 0.1); border-radius: 50%; animation: float 6s ease-in-out infinite; }
+    .particle:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-delay: 0s; }
+    .particle:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-delay: -2s; }
+    .particle:nth-child(3) { width: 100px; height: 100px; left: 35%; animation-delay: -4s; }
+    .particle:nth-child(4) { width: 40px; height: 40px; left: 50%; animation-delay: -1s; }
+    .particle:nth-child(5) { width: 70px; height: 70px; left: 70%; animation-delay: -3s; }
+    .particle:nth-child(6) { width: 50px; height: 50px; left: 85%; animation-delay: -5s; }
+    @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; } 50% { transform: translateY(-100px) rotate(180deg); opacity: 1; } }
+    .header { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+    .header-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 15px; }
+    .logo-icon { width: 50px; height: 50px; background: linear-gradient(45deg, #ff6b6b, #4ecdc4); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    .logo h1 { color: white; font-size: 28px; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+    .tagline { color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 300; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    .intro-section { text-align: center; margin-bottom: 50px; }
+    .intro-section h2 { color: white; font-size: 42px; font-weight: 800; margin-bottom: 20px; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); }
+    .intro-section p { color: rgba(255, 255, 255, 0.9); font-size: 18px; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+    .scanners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-bottom: 60px; }
+    .scanner-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border-radius: 20px; padding: 30px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); position: relative; overflow: hidden; transition: all 0.3s ease; }
+    .scanner-card:hover { transform: translateY(-5px); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15); }
+    .scanner-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4); background-size: 300% 300%; animation: gradientShift 3s ease infinite; }
+    @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+    .card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+    .card-icon { width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); }
+    .url-card .card-icon { background: linear-gradient(135deg, #667eea, #764ba2); }
+    .xss-card .card-icon { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .card-title { font-size: 24px; font-weight: 700; color: #333; margin-bottom: 5px; }
+    .card-subtitle { color: #666; font-size: 14px; }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; color: #555; font-weight: 600; margin-bottom: 8px; font-size: 14px; }
+    .form-input { width: 100%; padding: 15px 20px; border: 2px solid #e1e8ed; border-radius: 12px; font-size: 16px; transition: all 0.3s ease; background: white; font-family: inherit; }
+    .form-input:focus { outline: none; border-color: #667eea; box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); transform: translateY(-1px); }
+    .form-textarea { min-height: 120px; resize: vertical; font-family: 'Courier New', monospace; }
+    .submit-btn { background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 15px 30px; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; width: 100%; }
+    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3); }
+    .xss-card .submit-btn { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .result-section { margin-top: 25px; padding: 20px; background: linear-gradient(135deg, #f8f9ff, #e8f2ff); border-radius: 15px; border: 2px solid #e1e8ed; }
+    .result-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+    .result-title { font-size: 18px; font-weight: 600; color: #333; }
+    .result-text { font-size: 16px; font-weight: 600; margin-bottom: 10px; padding: 12px 16px; border-radius: 8px; display: inline-block; }
+    .safe { background: linear-gradient(135deg, #d4edda, #c3e6cb); color: #155724; border: 1px solid #c3e6cb; }
+    .danger, .error { background: linear-gradient(135deg, #f8d7da, #f5c6cb); color: #721c24; border: 1px solid #f5c6cb; }
+    .warning { background: linear-gradient(135deg, #fff3cd, #ffeaa7); color: #856404; border: 1px solid #ffeaa7; }
+    .input-display { background: rgba(0, 0, 0, 0.05); padding: 12px 16px; border-radius: 8px; margin-top: 10px; border-left: 4px solid #667eea; }
+    .input-code { font-family: 'Courier New', monospace; background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border: 1px solid #dee2e6; word-break: break-all; font-size: 13px; color: #495057; margin-top: 5px; display: block; }
+    .footer { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border-top: 1px solid rgba(255, 255, 255, 0.2); padding: 30px 0; text-align: center; margin-top: 80px; }
+    .footer p { color: rgba(255, 255, 255, 0.9); font-size: 16px; }

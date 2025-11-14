@@ -100,8 +100,8 @@ The users.db file stores encrypted passwords (SHA256 hashing).
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Mayankchauhan008/url-threat-detector.git
-cd url-threat-detector
+git clone https://github.com/Mayankchauhan008/CyberGuard-AI.git
+cd CyberGuard-AI
 ```
 ### 2. Install Dependencies
 

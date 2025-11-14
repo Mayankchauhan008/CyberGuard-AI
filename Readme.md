@@ -1,4 +1,4 @@
-# 🔐 URL Threat Detection Web App
+# 🔐 CyberGuard-AI Web App
 
 A powerful cybersecurity web application capable of detecting **Phishing URLs** and **XSS (Cross-Site Scripting)** payloads using Machine Learning.
 Now enhanced with a User Authentication System (Login & Register) and a modern UI dashboard.

@@ -1,45 +1,97 @@
 # 🔐 URL Threat Detection Web App
 
-A machine learning-powered web application that detects **Phishing** and **XSS (Cross-Site Scripting)** attacks from URLs. Built using Flask and Scikit-learn, the app provides a clean UI to enter a URL and get real-time threat predictions.
+A powerful cybersecurity web application capable of detecting **Phishing URLs** and **XSS (Cross-Site Scripting)** payloads using Machine Learning.
+Now enhanced with a User Authentication System (Login & Register) and a modern UI dashboard.
 
 ---
 
 ## 📌 Features
 
-- ✅ Detects Phishing URLs
-- ✅ Detects XSS (Cross-Site Scripting) payloads
-- ⚙️ Built with Flask + Scikit-learn
-- 📊 Trained on real-world datasets
-- 🌐 Web-based interface
+🕵️ Phishing URL Detection	 -  ML-based classification of malicious links
+
+⚡ XSS Payload Detection - 	Identifies script injection threats
+
+🔐 Secure Authentication -	Login/Register using SQLite & SHA256 hashing
+
+🎨 React-style Modern UI -	Glassmorphism cards, gradients, animations
+
+📊 Real-world Dataset Trained Models -	Trained on Kaggle datasets
+
+💾 Local data storage - SQLite persistent local database
+
+📡 Real-time predictions -	On-click evaluation output
 
 ---
 
 ## 📁 Project Structure
 
-├── app.py # Main Flask backend
+├── app.py                     # Main Flask application
 
-├── malicious_url.ipynb # Phishing URL dataset(Kaggle)
+├── users.db                   # Authentication database (auto-created)
 
-├── XSS.ipynb # XSS payload dataset(Kaggle)
+├── models/                    # ML models & encoders
 
-├── models/ # Trained ML models
+│   ├── xgboost_gpu_model.pkl
 
-│ └── phishing_model.pkl
+│   ├── random_forest_gpu_model.pkl
 
-│ └── xss_model.pkl
+│   ├── xss_model.pkl
 
-├── static/ # Static assets
+│   └── xss_vectorizer.pkl
 
-│ └── style.css
+├── templates/                 # Frontend UI pages
 
-├── templates/ # HTML templates
+│   ├── index.html             # Dashboard
 
-│ └── index.html
+│   ├── login.html             # Login page
 
-├── requirements.txt # Python dependencies
+│   └── register.html          # Create account page
 
-└── README.md # Project documentation
+├── static/
 
+│   └── style.css              # Styling
+
+├── notebooks/                 # Model training notebooks
+
+│   ├── malicious_url.ipynb
+
+│   └── XSS.ipynb
+
+├── requirements.txt           # Dependencies
+
+└── README.md                  # Documentation
+
+---
+
+### 🛠️ Tech Stack
+
+Technology	-  Used For
+
+Python, Flask	 - Backend server
+
+Scikit-learn	- ML model creation
+
+SQLite	-  User authentication DB
+
+HTML / CSS  -	Modern UI
+
+Joblib	-  Model loading
+
+NumPy / Pandas	-  Data preprocessing
+
+---
+
+### 🔑 Authentication Flow
+
+Page	-  Route
+
+Register	-  /register
+
+Login	-  /login
+
+View stored DB users	-  via DB Browser for SQLite
+
+The users.db file stores encrypted passwords (SHA256 hashing).
 
 ---
 
@@ -61,6 +113,7 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
+---
 
 🧠 Datasets
 
@@ -80,7 +133,15 @@ xss_model.pkl: For detecting XSS payloads
 
 Models are typically trained using algorithms like Random Forest or Naive Bayes and saved with joblib or pickle.
 
+---
+
 ## 🖥️ UI Preview
+
+### 🔐 Login Page
+![Login_Page UI](static/images/login_page.png)
+
+### ✨ Register Page
+![Register_Page UI](static/images/create_account.png)
 
 ### 🔍 Phishing Detection
 ![Phishing UI](static/images/phishing-ui.png)
@@ -88,18 +149,19 @@ Models are typically trained using algorithms like Random Forest or Naive Bayes 
 ### 💥 XSS Detection
 ![XSS UI](static/images/xss-ui.png)
 
+---
 
 ### 🔧 Future Improvements
 
-- 🚫 Add SQL Injection detection
+- 🛡 Add SQL Injection & Malware URL detection
 
-- 🔐 Improve model robustness
+- 📡 Add real-time API integration (Google Safe Browsing)
 
-- 🌍 Integrate with a real-time URL scanner API
+- ☁ Deploy on Render / AWS / Azure
 
-- ☁️ Deploy to Heroku, Render, or AWS
+- 🧪 Add unit tests + CI/CD
 
-- 📦 Add Docker support
+- 📦 Docker containerization
 
 ---
 

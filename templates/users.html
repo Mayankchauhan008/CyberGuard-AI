@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registered Users</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    table {
+      width: 80%;
+      margin: 50px auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #667eea;
+      color: white;
+    }
+    h2 {
+      text-align: center;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registered Users</h2>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    {% for u in users %}
+    <tr>
+      <td>{{ u.id }}</td>
+      <td>{{ u.name }}</td>
+      <td>{{ u.email }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
